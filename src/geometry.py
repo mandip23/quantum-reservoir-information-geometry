@@ -1,3 +1,5 @@
+import numpy as np
+
 def von_neumann_entropy(rho):
     eigvals = np.linalg.eigvalsh(rho)
 
