@@ -4,10 +4,7 @@ from src.embedding import reconstruct_phase_space
 from src.reservoir import run_quantum_reservoir_simulation, create_pauli_operators
 from src.geometry import compute_quantum_geometry
 from src.lorenze_dynamics import regim_change
-input_scaling=0.5
-dephasing_rate=0.001
-relaxation_rate=0.0005
-dt=0.02
+from src.confi import dt,input_scaling,dephasing_rate ,relaxation_rate
 def run_pipeline(sequence, title_name, save_filename, true_split_index):
     # Reconstructing phase space via Takens Embedding
     embedded_data = reconstruct_phase_space(sequence)
