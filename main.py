@@ -12,10 +12,10 @@ def run_pipeline(sequence, title_name, save_filename, true_split_index):
     # Simulating Quantum Ising Reservoir
     sim_results = run_quantum_reservoir_simulation(
         normalized_sequence, 
-        dt=DT,
-        input_scaling=INPUT_SCALING,
-        dephasing_rate=DEPHASING_RATE,
-        relaxation_rate=RELAXATION_RATE
+        dt=dt,
+        input_scaling=input_scaling,
+        dephasing_rate=dephasing_rate,
+        relaxation_rate=relaxation_rate
     )
 
     # Computing Quantum Information Geometry metrics
@@ -63,7 +63,7 @@ def main():
     
     # 2. RUN MACKEY-GLASS PIPELINE
     
-    mackey_series, mackey_split_idx = generate_mackey_glass_dynamic_regime(n_steps=5000, dt=DT)
+    mackey_series, mackey_split_idx = generate_mackey_glass_dynamic_regime(n_steps=5000, dt=dt)
     
     run_pipeline(
         sequence=mackey_series, 
@@ -72,7 +72,7 @@ def main():
         true_split_index=mackey_split_idx
     )
     
-    print("\n All pipelines completed successfully! Check your directory for saved plots.")
+    
 
 if __name__ == "__main__":
     main()
