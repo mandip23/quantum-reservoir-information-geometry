@@ -37,7 +37,7 @@ def create_ising_reservoir(n_qubits, paulis, J=-1.0, Gamma=0.5):
         
     return H_sys
     #input hamiltonian
-def compute_ising_input_hamiltonian(vec, paulis, input_scaling=0.1):
+def compute_ising_input_hamiltonian(vec, paulis, input_scaling=input_scaling):
     
     dim = paulis["Z"][0].shape[0]
     H_in = np.zeros((dim, dim), dtype=complex)
@@ -48,7 +48,7 @@ def compute_ising_input_hamiltonian(vec, paulis, input_scaling=0.1):
         
     return input_scaling * H_in
 
-def create_lindblad_operators(n_qubits, dephasing_rate=0.01, relaxation_rate=0.005):
+def create_lindblad_operators(n_qubits, dephasing_rate=dephasing_rate, relaxation_rate=relaxation_rate):
     """
     Creates jump operators simulating natural environmental loss (dephasing & decay).
     Includes fixed sigma_minus to correctly relax states towards ground state |0>.
@@ -78,10 +78,7 @@ def create_lindblad_operators(n_qubits, dephasing_rate=0.01, relaxation_rate=0.0
 
 # ============================================================================
 def enforce_density_matrix(rho):
-    """
-    Forces the density matrix to remain physically valid by enforcing Hermiticity,
-    clipping negative eigenvalues to 0 (positivity), and re-normalizing Trace = 1.
-    """
+    
     # Force exact Hermiticity
     rho = (rho + rho.conj().T) / 2
     
@@ -139,7 +136,7 @@ def run_quantum_reservoir_simulation(lorenz_sequence, n_qubits=4, dt=0.001, J=-1
     # Initialize stable hardware primitives
     paulis = create_pauli_operators(n_qubits)
     H_sys = create_ising_reservoir(n_qubits, paulis, J=J, Gamma=Gamma)
-    lindblad_ops = create_lindblad_operators(n_qubits, dephasing_rate=0.01, relaxation_rate=0.005)
+    lindblad_ops = create_lindblad_operators(n_qubits, dephasing_rate=dephasing, relaxation_rate=relation_rate)
     
     # Initialize state vector to clear vacuum ground-state |0000><0000|
     rho = np.zeros((dim, dim), dtype=complex)
@@ -161,7 +158,7 @@ def run_quantum_reservoir_simulation(lorenz_sequence, n_qubits=4, dt=0.001, J=-1
         observable_history.append(z_features)
         
         # 3. Form dynamic data tracking field
-        H_in = compute_ising_input_hamiltonian(vec, paulis, input_scaling=0.1)
+        H_in = compute_ising_input_hamiltonian(vec, paulis, input_scaling=input_scaling)
         H_total = H_sys + H_in
         
         # 4. Numerically propagate step forward via high-accuracy RK4
