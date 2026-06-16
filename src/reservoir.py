@@ -130,7 +130,7 @@ def rk4_lindblad_step(rho, H, lindblad_ops, dt):
     rho_new = rho + (dt / 6.0) * (k1 + 2 * k2 + 2 * k3 + k4)
     
     return enforce_density_matrix(rho_new)
-def run_quantum_reservoir_simulation(lorenz_sequence, n_qubits=4, dt=0.001, J=-1.0, Gamma=0.5):
+def run_quantum_reservoir_simulation(lorenz_sequence, n_qubits=4, dt=dt, J=-1.0, Gamma=0.5, input_scaling=input_scaling, dephasing_rate=dephasing_rate, relaxation_rate=relaxation_rate):
     """
     Executes full continuous data feeding over time and records trajectory states.
     """
