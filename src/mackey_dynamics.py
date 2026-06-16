@@ -1,4 +1,4 @@
-def generate_mackey_glass_dynamic_regime(n_steps=5000, dt=dt, beta=0.2, gamma=0.1, n=10):
+def generate_mackey_glass_dynamic_regime(n_steps=5000, dt=0.02, beta=0.2, gamma=0.1, n=10):
     """Generates a time series where tau changes dynamically halfway through."""
     total_steps = n_steps + 1000  # including transient
     series = np.zeros(total_steps)
