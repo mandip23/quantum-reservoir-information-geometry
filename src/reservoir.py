@@ -1,3 +1,6 @@
+import numpy as np 
+from src.confi import dt,input_scaling,dephasing_rate,relaxation_rate
+
 def create_pauli_operators(n_qubits):
     """
     Creates expanded 2^N x 2^N Pauli matrices for each qubit using Kronecker products.
