@@ -11,7 +11,7 @@ def runge_kutta4(n_steps=10000,dt1=0.001,rho=28):
       k2=lorenz_equations(state+0.5*dt1*k1,rho=rho)
       k3=lorenz_equations(state+0.5*dt1*k2,rho=rho)
       k4=lorenz_equations(state+dt1*k3,rho=rho)
-      state = state+dt/6*(k1+2*k2+2*k3+k4)
+      state = state+dt1/6*(k1+2*k2+2*k3+k4)
 
 
     
@@ -20,7 +20,7 @@ def runge_kutta4(n_steps=10000,dt1=0.001,rho=28):
       k2=lorenz_equations(state+0.5*dt1*k1,rho=rho)
       k3=lorenz_equations(state+0.5*dt1*k2,rho=rho)
       k4=lorenz_equations(state+dt1*k3,rho=rho)
-      state = state+dt/6*(k1+2*k2+2*k3+k4)
+      state = state+dt1/6*(k1+2*k2+2*k3+k4)
       series.append(state.copy())
     
     return np.array(series)
