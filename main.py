@@ -4,7 +4,7 @@ from src.embedding import reconstruct_phase_space
 from src.reservoir import run_quantum_reservoir_simulation, create_pauli_operators
 from src.geometry import compute_quantum_geometry
 from src.lorenz_dynamics.py import regim_change
-put_scaling=0.5
+input_scaling=0.5
 dephasing_rate=0.001
 relaxation_rate=0.0005
 dt=0.02
