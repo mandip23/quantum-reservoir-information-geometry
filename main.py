@@ -16,11 +16,12 @@ def run_pipeline(sequence, title_name, save_filename, true_split_index):
         dt=dt,
         input_scaling=input_scaling,
         dephasing_rate=dephasing_rate,
-        relaxation_rate=relaxation_rate
+        relaxation_rate=relaxation_rate,
+        n_qubits=n_qubits
     )
 
     # Computing Quantum Information Geometry metrics
-    paulis = create_pauli_operators(4)
+    paulis = create_pauli_operators(n_qubits)
     geometry = compute_quantum_geometry(sim_results["rho_history"], paulis)
 
     # Plotting and saving geometric signatures...
@@ -59,6 +60,7 @@ def main():
         title_name="Lorenz Attractor", 
         save_filename="lorenz_quantum_signatures.png",
         true_split_index=nstep
+        n_qubits=n_qubits_lo
     )
 
     
@@ -70,7 +72,8 @@ def main():
         sequence=mackey_series, 
         title_name="Mackey-Glass System", 
         save_filename="mackey_quantum_signatures.png",
-        true_split_index=mackey_split_idx
+        true_split_index=mackey_split_idx,
+        n_qubits=n_qubits_mc
     )
     
     
