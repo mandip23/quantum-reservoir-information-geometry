@@ -5,7 +5,7 @@ from src.reservoir import run_quantum_reservoir_simulation, create_pauli_operato
 from src.geometry import compute_quantum_geometry
 from src.lorenze_dynamics import regim_change
 from src.confi import dt,input_scaling,dephasing_rate ,relaxation_rate
-def run_pipeline(sequence, title_name, save_filename, true_split_index):
+def run_pipeline(sequence, n_qubits, title_name, save_filename, true_split_index):
     # Reconstructing phase space via Takens Embedding
     embedded_data = reconstruct_phase_space(sequence)
     normalized_sequence = embedded_data["normalized"]
@@ -59,7 +59,7 @@ def main():
         sequence=lorenz_series[:, 0], 
         title_name="Lorenz Attractor", 
         save_filename="lorenz_quantum_signatures.png",
-        true_split_index=nstep
+        true_split_index=nstep,
         n_qubits=n_qubits_lo
     )
 
