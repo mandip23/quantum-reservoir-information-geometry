@@ -139,7 +139,7 @@ def run_quantum_reservoir_simulation(lorenz_sequence, n_qubits=n_qubits_lo, dt=d
     # Initialize stable hardware primitives
     paulis = create_pauli_operators(n_qubits)
     H_sys = create_ising_reservoir(n_qubits, paulis, J=J, Gamma=Gamma)
-    lindblad_ops = create_lindblad_operators(n_qubits, dephasing_rate=dephasing_rate, relaxation_rate=relation_rate)
+    lindblad_ops = create_lindblad_operators(n_qubits, dephasing_rate=dephasing_rate, relaxation_rate=relaxation_rate)
     
     # Initialize state vector to clear vacuum ground-state |0000><0000|
     rho = np.zeros((dim, dim), dtype=complex)
