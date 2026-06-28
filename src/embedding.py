@@ -25,9 +25,9 @@ def time_delay_embedding(series, delay, dimension):
     return embedded
 
 
-# ============================================================
+
 # AVERAGE MUTUAL INFORMATION
-# ============================================================
+
 
 def mutual_information(series, lag, n_bins=32):
 
@@ -90,9 +90,9 @@ def find_optimal_delay(
     return np.argmin(mis) + 1
 
 
-# ============================================================
+
 # FALSE NEAREST NEIGHBORS
-# ============================================================
+
 
 def false_nearest_neighbors(
     series,
@@ -102,13 +102,7 @@ def false_nearest_neighbors(
     a_tol=2.0,
     theiler_window=None
 ):
-    """
-    Kennel et al. False Nearest Neighbors
-
-    Includes:
-    - KDTree acceleration
-    - Theiler window
-    """
+   
 
     if theiler_window is None:
         theiler_window = delay
@@ -225,9 +219,9 @@ def find_optimal_embedding_dim(
     return np.argmin(fnn_curve) + 1
 
 
-# ============================================================
+
 # NORMALIZATION FOR QUANTUM ENCODING
-# ============================================================
+
 
 def normalize_embedding(embedded):
 
@@ -245,9 +239,9 @@ def normalize_embedding(embedded):
     return z, scaler
 
 
-# ============================================================
+
 # COMPLETE PHASE SPACE PIPELINE
-# ============================================================
+
 
 def reconstruct_phase_space(
     series,
