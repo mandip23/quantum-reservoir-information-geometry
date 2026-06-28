@@ -1,6 +1,6 @@
-dt = 0.02
+dt = 0.001
 input_scaling = 0.5
-dephasing_rate = 0.001
-relaxation_rate= 0.0005
-n_qubits_lo = 4
-n_qubits_mc = 5
+dephasing_rate = 0.005
+relaxation_rate= 0.001
+n_qubits_lo = 4 
+
