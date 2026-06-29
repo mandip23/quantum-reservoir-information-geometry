@@ -1,5 +1,5 @@
 import numpy as np 
-from src.confi import dt,input_scaling,dephasing_rate,relaxation_rate,n_qubits_lo,n_qubits_mc
+from src.confi import dt,input_scaling,dephasing_rate,relaxation_rate,n_qubits_lo
 
 def create_pauli_operators(n_qubits):
     """
