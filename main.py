@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from src.reservoir import create_pauli_operators, run_quantum_reservoir_simulation
 from src.embedding import reconstruct_phase_space, time_delay_embedding, normalize_embedding
-from src.confi import dt, input_scaling, dephasing_rate, relaxation_rate, n_qubits_lo, n_qubits_mc
+from src.confi import dt, input_scaling, dephasing_rate, relaxation_rate, n_qubits_lo
 
 from src.dynamicindicator import (
     quantum_susceptibility_indicator, 
