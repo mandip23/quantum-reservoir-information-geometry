@@ -11,7 +11,7 @@ This repository implements an open quantum reservoir framework designed to detec
 # Scientific Pipeline 
 
 
-        Classical Driver             
+       1. Classical Driver             
   Lorenz System with Parameter Drift
       ρ: 28.0 (Chaos) -> 5.0 (FP)   
 
@@ -19,7 +19,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   | (Continuous Feature Injection)
                   v
 
-        Quantum Reservoir           
+       2. Quantum Reservoir           
  Dissipative 1D Transverse Ising    
    Driven by Lindblad Dynamics      
 
@@ -27,7 +27,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   | (Density Matrix  ρ(t))
                   v
 
-    Quantum Feature Extraction      
+   3. Quantum Feature Extraction      
  • Quantum Susceptibility (λ_max)   
  • Magnetization Variance           
  • Quantum Speed Variance           
@@ -35,7 +35,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   |
                   v
 
-       Criticality Analysis         
+      4. Criticality Analysis         
   Transition vs. Control Baseline 
   
 # mathematical equtions involed in this projects 
