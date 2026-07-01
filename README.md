@@ -35,7 +35,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   |
                   v
 
-      4. Criticality Analysis         
+   4. Criticality Analysis         
   Transition vs. Control Baseline 
   
 ### 1. lorenz dynnamic
