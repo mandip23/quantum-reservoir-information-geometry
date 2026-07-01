@@ -32,8 +32,10 @@ This repository implements an open quantum reservoir framework designed to detec
  • Magnetization Variance           
  • Quantum Speed Variance           
  • Fidelity Autocorrelation         
+                  
                   |
-                  v
+                  | result
+                  v   
 
    4. Criticality Analysis         
   Transition vs. Control Baseline 
