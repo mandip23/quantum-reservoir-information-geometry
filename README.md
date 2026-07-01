@@ -10,9 +10,9 @@ This repository implements an open quantum reservoir framework designed to detec
 
 # Scientific Pipeline 
 
-    1. lorenz system           
+ 1. lorenz system           
       Lorenz System with Parameter Drift
-      ρ: 28.0 (Chaos) -> 5.0 (FP)   
+      ρ= 28.0 (Chaos) to 5.0 (FP)   
 
                   
 we generate data from lorenz equation and  Insert into reservoir
