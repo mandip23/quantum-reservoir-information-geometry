@@ -54,7 +54,7 @@ $$\frac{d\rho}{dt} = -i[H_{\text{sys}} + H_{\text{in}}(t), \rho] + \sum_{k} \lef
 * **System Hamiltonian ($H_{\text{sys}}$):** A 1D nearest-neighbor $Z$-$Z$ Ising coupling framework with a global transverse field $X$:
   $$H_{\text{sys}} = J \sum_{i=1}^{N-1} Z_i Z_{i+1} + \Gamma \sum_{i=1}^N X_i$$
 * **Input Hamiltonian ($H_{\text{in}}$):** Classical multi-variable arrays are dynamically coupled to the reservoir along the longitudinal axis:
-  $$H_{\text{in}}(t) = \alpha \sum_{q} \text{vec}[q](t) \cdot Z_q$$
+  $$H_{\text{in}}(t) = \alpha \sum_{k=1}^{3} x_k(t) Z_k$$
 * **Dissipation Channels ($L_k$):** Includes pure dephasing constraints via $\sqrt{\gamma_{deph}} Z_i$ and energy relaxation pulling states down to the ground state via $\sqrt{\gamma_{relax}} \sigma_i^-$.
 
 ---
