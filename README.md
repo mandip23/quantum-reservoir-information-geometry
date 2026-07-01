@@ -1,9 +1,13 @@
 
-# Quantum Reservoir Computing for Early-Warning Detection of Non-Linear Transitions(lorenz system)
+# Quantum Reservoir Computing for Detecting Dynamical Regime Changes in the Lorenz System
 
-This repository implements an open quantum reservoir framework designed to detect early-warning signals (EWS) of critical transitions in non-stationary classical dynamical systems. By inserting a parameter-drifting chaotic Lorenz system into a dissipative(Lindblad Master Equation) transverse-field Ising chain, we analyze how quantum-information-inspired observables track  regime shifts.
+In this work, presents a quantum reservoir computing framework for investigating whether quantum-information observables extracted from an open quantum system can distinguish stationary chaotic dynamics from continuously drifting nonlinear dynamics.
 
-# In this project we used the following physics
+The project combines nonlinear dynamical systems, open quantum systems, and quantum-information-inspired observables to study how a dissipative quantum reservoir responds to gradual parameter changes in the Lorenz system.
+
+ By inserting a parameter-drifting chaotic Lorenz system into a dissipative(Lindblad Master Equation) transverse-field Ising chain, we analyze how quantum-information-inspired observables track  regime shifts.
+
+#  physics background
 1.Open Quantum Systems, 
 2.Quantum Information Geometry, 
 3. Nonlinear Dynamics.
@@ -41,7 +45,8 @@ we generate data from lorenz equation and  Insert into reservoir
   graphically analyze the result 
   
 ### 1. lorenz dynnamic
- 3D Lorenz system where the Rayleigh parameter $\rho$ continuously moves over time to simulate a physical transition crossing a subcritical Hopf bifurcation ($\rho_c \approx 24.74$):
+ A Lorenz system with a continuously varying Rayleigh parameter is used to generate non-stationary dynamics.
+ ($\rho_c \approx 24.74$):
 
 $$\frac{dx}{dt} = \sigma(y - x), \quad \frac{dy}{dt} = x(\rho(t) - z) - y, \quad \frac{dz}{dt} = xy - \beta z$$
 
@@ -71,5 +76,7 @@ We extract tracking indicator from the density matrix trajectory $\rho(t)$ using
   $$v(t) = \frac{\|\rho(t) - \rho(t-1)\|_F}{\|\rho(t)\|_F}$$
 * **Fidelity Lag-1 Autocorrelation:** The lag-1 Pearson correlation coefficient of consecutive Uhlmann state fidelities:
   $$F(\rho_t, \rho_{t-1}) = \left( \text{Tr} \sqrt{\sqrt{\rho_t} \rho_{t-1} \sqrt{\rho_t}} \right)^2$$
-   
+  
+##  Result  
+
 
