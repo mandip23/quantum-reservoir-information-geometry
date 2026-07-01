@@ -11,7 +11,7 @@ This repository implements an open quantum reservoir framework designed to detec
 # Scientific Pipeline 
 
 
-        1. lorenz system           
+    1. lorenz system           
   Lorenz System with Parameter Drift
       ρ: 28.0 (Chaos) -> 5.0 (FP)   
 
@@ -19,7 +19,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   | (data Insert into reservoir)
                   v
 
-       2. Quantum Reservoir           
+    2. Quantum Reservoir           
  Dissipative 1D Transverse Ising    
    Driven by Lindblad Dynamics      
 
