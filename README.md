@@ -11,7 +11,7 @@ This repository implements an open quantum reservoir framework designed to detec
 # Scientific Pipeline 
 
 
-       ### 1. Classical Driver             
+        1. lorenz system           
   Lorenz System with Parameter Drift
       ρ: 28.0 (Chaos) -> 5.0 (FP)   
 
@@ -19,7 +19,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   | (Continuous Feature Injection)
                   v
 
-      ### 2. Quantum Reservoir           
+       2. Quantum Reservoir           
  Dissipative 1D Transverse Ising    
    Driven by Lindblad Dynamics      
 
@@ -27,7 +27,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   | (Density Matrix  ρ(t))
                   v
 
-   ###3. Quantum Feature Extraction      
+   3. Quantum Feature Extraction      
  • Quantum Susceptibility (λ_max)   
  • Magnetization Variance           
  • Quantum Speed Variance           
@@ -59,7 +59,7 @@ $$\frac{d\rho}{dt} = -i[H_{\text{sys}} + H_{\text{in}}(t), \rho] + \sum_{k} \lef
 
 ---
 
-## 📊  Quantum Indicators
+##   Quantum Indicators
 
 We extract tracking indicator from the density matrix trajectory $\rho(t)$ using the  expectation value relation $\langle \hat{O} \rangle = \text{Tr}(\rho \hat{O})$:
 
