@@ -78,6 +78,6 @@ We extract tracking indicator from the density matrix trajectory $\rho(t)$ using
   $$F(\rho_t, \rho_{t-1}) = \left( \text{Tr} \sqrt{\sqrt{\rho_t} \rho_{t-1} \sqrt{\rho_t}} \right)^2$$
   
 ##  Result  
-![](quantum-reservoir-information-geometry/blob/main/fig.png)
+![](fig.png)
 
 
