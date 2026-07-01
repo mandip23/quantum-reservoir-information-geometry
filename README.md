@@ -1,7 +1,7 @@
 
 # Quantum Reservoir Computing for Early-Warning Detection of Non-Linear Transitions(lorenz system)
 
-This repository implements an open quantum reservoir framework designed to detect early-warning signals (EWS) of critical transitions in non-stationary classical dynamical systems. By injecting a parameter-drifting chaotic Lorenz system into a dissipative(Lindblad Master Equation) 1D transverse-field Ising chain, we analyze how quantum-information-inspired observables track  regime shifts.
+This repository implements an open quantum reservoir framework designed to detect early-warning signals (EWS) of critical transitions in non-stationary classical dynamical systems. By inserting a parameter-drifting chaotic Lorenz system into a dissipative(Lindblad Master Equation) transverse-field Ising chain, we analyze how quantum-information-inspired observables track  regime shifts.
 
 # In this project we used the following physics
 1.Open Quantum Systems, 
@@ -16,7 +16,7 @@ This repository implements an open quantum reservoir framework designed to detec
       ρ: 28.0 (Chaos) -> 5.0 (FP)   
 
                   |
-                  | (Continuous Feature Injection)
+                  | (data Insert into reservoir)
                   v
 
        2. Quantum Reservoir           
@@ -38,13 +38,13 @@ This repository implements an open quantum reservoir framework designed to detec
       4. Criticality Analysis         
   Transition vs. Control Baseline 
   
-### 1. lorenze dynnamic
- 3D Lorenz system where the Rayleigh parameter $\rho$ continuously drifts over time to simulate a physical transition crossing a subcritical Hopf bifurcation ($\rho_c \approx 24.74$):
+### 1. lorenz dynnamic
+ 3D Lorenz system where the Rayleigh parameter $\rho$ continuously moves over time to simulate a physical transition crossing a subcritical Hopf bifurcation ($\rho_c \approx 24.74$):
 
 $$\frac{dx}{dt} = \sigma(y - x), \quad \frac{dy}{dt} = x(\rho(t) - z) - y, \quad \frac{dz}{dt} = xy - \beta z$$
 
-* **Transition Cohort:** $\rho(t)$ undergoes a nonlinear `smoothstep` decay profile ($\rho: 28.0 \to 5.0$), triggering **Critical Slowing Down (CSD)**.
-* **Control Cohort:** $\rho(t)$ is fixed at $28.0$ to provide a stationary chaotic baseline.
+* **Transition Cohort:** $\rho(t)$ undergoes a nonlinear smoothstep decay profile ($\rho: 28.0 \to 5.0$), triggering Critical Slowing Down (CSD).
+* **Control Cohort:** $\rho(t)$ is fixed at $28.0$ to provide a  baseline.
 
 ### 2. Dissipative Quantum Reservoir
 The quantum hardware substrate consists of an $4$-qubit network evolving via the Lindblad Master Equation:
