@@ -19,6 +19,7 @@ This repository implements an open quantum reservoir framework designed to detec
                   | (data Insert into reservoir)
                   v
 
+  
     2. Quantum Reservoir           
  Dissipative 1D Transverse Ising    
    Driven by Lindblad Dynamics      
