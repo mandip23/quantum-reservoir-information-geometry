@@ -59,7 +59,7 @@ $$\frac{d\rho}{dt} = -i[H_{\text{sys}} + H_{\text{in}}(t), \rho] + \sum_{k} \lef
   $$H_{\text{in}}(t) = \alpha \sum_{k=1}^{3} x_k(t) Z_k$$
 * **Dissipation Channels ($L_k$):** Includes pure dephasing constraints via $\sqrt{\gamma_{deph}} Z_i$ and energy relaxation pulling states down to the ground state via $\sqrt{\gamma_{relax}} \sigma_i^-$.
 
----
+
 
 ##   Quantum Indicators
 
