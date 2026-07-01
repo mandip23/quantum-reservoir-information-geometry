@@ -12,7 +12,7 @@ This repository implements an open quantum reservoir framework designed to detec
 
 
     1. lorenz system           
-  Lorenz System with Parameter Drift
+      Lorenz System with Parameter Drift
       ρ: 28.0 (Chaos) -> 5.0 (FP)   
 
                   |
@@ -21,25 +21,25 @@ This repository implements an open quantum reservoir framework designed to detec
 
   
     2. Quantum Reservoir           
- Dissipative 1D Transverse Ising    
-   Driven by Lindblad Dynamics      
+      Dissipative 1D Transverse Ising    
+      Driven by Lindblad Dynamics      
 
                   |
                   | (Density Matrix  ρ(t))
                   v
 
    3. Quantum Feature Extraction      
- • Quantum Susceptibility (λ_max)   
- • Magnetization Variance           
- • Quantum Speed Variance           
- • Fidelity Autocorrelation         
+      Quantum Susceptibility (λ_max)   
+      Magnetization Variance           
+      Quantum Speed Variance           
+      Fidelity Autocorrelation         
                   
                   |
                   | result
                   v   
 
    4. Criticality Analysis         
-  Transition vs. Control Baseline 
+      Transition vs. Control Baseline 
   
 ### 1. lorenz dynnamic
  3D Lorenz system where the Rayleigh parameter $\rho$ continuously moves over time to simulate a physical transition crossing a subcritical Hopf bifurcation ($\rho_c \approx 24.74$):
