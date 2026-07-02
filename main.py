@@ -17,10 +17,7 @@ from src.dynamicindicator import (
 from src.lorenze_dynamics import runge_kutta4_dynamic, regime_drift_validated
 
 def collect_ensemble_metrics(n_trials=5, window=200, is_control=False):
-    """
-    Runs repeated randomized simulations to build average metrics and standard 
-    deviation bounds across both Transition and Control conditions using nonlinear drifting.
-    """
+   
     n_qubits = n_qubits_lo
     paulis = create_pauli_operators(n_qubits)
     
@@ -97,19 +94,19 @@ def main():
     n_trials = 10  # Set to a robust ensemble sample size
     window_size = 20# initally 50
     
-    print("=========================================================")
+    
     print("PROCESSING TRANSITION GROUP DATA GENERATION")
-    print("=========================================================")
+  
     trans = collect_ensemble_metrics(n_trials=n_trials, window=window_size, is_control=False)
     
-    print("\n=========================================================")
+    print("\n==")
     print("PROCESSING CONTROL BASELINE GROUP DATA GENERATION")
-    print("=========================================================")
+   
     ctrl = collect_ensemble_metrics(n_trials=n_trials, window=window_size, is_control=True)
     
-    # -----------------------------------------------------------
+ 
     # VISUALIZATION MATRIX WITH TWO-POINT PLOT ALIGNMENT
-    # -----------------------------------------------------------
+   
     fig, axs = plt.subplots(4, 2, figsize=(16, 14), sharex=False, sharey=False)
     
     metrics_keys = ["lambda_max", "mag_variance", "speed_variance", "fidelity_corr"]
@@ -126,9 +123,9 @@ def main():
         m_trans, s_trans = compute_bounds(trans[key])
         m_ctrl, s_ctrl = compute_bounds(ctrl[key])
         
-        # =========================================================================
+       
         # DYNAMIC HORIZONTAL ALIGNMENT FIX (Eliminates flat trailing lines)
-        # =========================================================================
+       
         # Determine the maximum actual valid size produced by your rolling window indicators
         actual_max_steps = min(len(m_trans), len(m_ctrl))
         
