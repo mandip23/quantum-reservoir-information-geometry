@@ -79,5 +79,19 @@ We extract tracking indicator from the density matrix trajectory $\rho(t)$ using
   
 ##  Result  
 ![](fig.png)
+The quantum reservoir responds differently when the Lorenz system undergoes a parameter transition compared with the stationary control case.
 
+Among the indicators I tested, Quantum Susceptibility gave the clearest separation between the transition and control simulations. Quantum Speed Variance also showed a noticeable increase during the parameter drift, suggesting that the reservoir dynamics become more active as the underlying system changes.
+
+Magnetization Variance showed only a small difference between the two cases, making it a weaker indicator in the current implementation. Fidelity Autocorrelation remained almost constant throughout the simulations and did not provide useful information for distinguishing the two regimes.
+
+Overall, these results means that some quantum-information observables extracted from an open quantum reservoir are sensitive to changes in the underlying nonlinear dynamics. Although the current framework does not yet provide a predictive early-warning signal before the transition, it establishes a foundation for exploring more advanced quantum indicators in future work.
+## limitation
+This project is computational research framework it is not a completed theory of quantum early-warning signals.
+
+Current limitations include
+
+- no predictive indicator before the transition
+- fixed reservoir architecture
+- only tested in lorenz system 
 
